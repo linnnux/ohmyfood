@@ -1,0 +1,47 @@
+:root
+{
+
+  --primary : #9356DC ;
+  --secondary : #FF79DA;
+  --tertiary : #99E2D0;
+
+
+  --blue       : #0065FC;
+  --blue-light : #DEEBFF;
+
+  --light-grey: #F2F2F2;
+  --grey       : #e6e6e6;
+}
+
+.mmn-white
+{
+  background-color: white;
+}
+.mmn-text-white
+{
+  color: white;
+}
+.mmn-grey
+{
+  background-color: var(--grey);
+}
+.mmn-text-grey
+{
+  color: var(--grey);
+}
+.mmn-light-grey
+{
+  background-color: var(--light-grey);
+}
+.mmn-text-light-grey
+{
+  color: var(--light-grey);
+}
+.mmn-text-blue
+{
+  color: var(--blue);
+}
+.mmn-blue
+{
+  background: var(--blue);
+}

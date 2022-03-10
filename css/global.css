@@ -1,0 +1,208 @@
+
+*
+{
+  box-sizing: border-box;
+}
+
+body
+{
+  background-color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  text-align: justify;
+  color: black;
+  max-width: 1300px;
+  margin: auto;
+}
+
+h1
+{
+  float: left;
+  text-align: left;
+  display: block;
+  /* https://fonts.google.com/specimen/Rancho?preview.text=Booki&preview.text_type=custom */
+  font-family: 'Rancho', cursive;
+  color: var(--blue);
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+  font-size: 48;
+
+}
+h2
+{
+  font-size: 20px;
+  font-weight: bold;
+}
+h3
+{
+  font-size: 16px;
+  font-weight: bold;
+}
+p
+{
+  font-size: 14px;
+  font-weight:  400;
+}
+img
+{
+   width:100%;
+}
+
+
+
+
+/* containers */
+
+.mmn-container
+{
+  width: 100%;
+  display: flex;
+}
+
+.mmn-container, .mmn-half :after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mmn-half
+{
+  width: 50%;
+  float: left;
+}
+.mmn-quarter
+{
+  width: 25%;
+  float: left;
+}
+.mmn-threequarter
+{
+  width: 75%;
+  float: left;
+}
+.mmn-twothird
+{
+  width: 66.66%;
+  float: left;
+}
+.mmn-third
+{
+  width: 33.33%;
+  float: left;
+}
+
+/* text align */
+
+.mmn-right
+{
+  text-align: right;
+  width: auto;
+  float: right;
+}
+.mmn-left
+{
+  text-align: left;
+}
+.mmn-center
+{
+  margin: auto;
+  text-align: center;
+
+}
+
+/* borders */
+.mmn-circle
+{
+  border-radius: 50%;
+}
+
+.mmn-border
+{
+  border: 1px solid;
+}
+
+.mmn-rounded
+{
+  border-radius: 25px;
+
+}
+
+/* font sizes */
+
+.mmn-tiny
+{
+  font-size: 10px;
+}
+
+.mmn-small
+{
+  font-size: 10px;
+}
+.mmn-medium
+{
+  font-size: 12px;
+}
+.mmn-large
+{
+  font-size: 14px;
+}
+.mmn-xlarge
+{
+  font-size: 18px;
+}
+.mmn-xxlarge
+{
+  font-size: 22px;
+}
+.mmn-xxxlarge
+{
+  font-size: 48px;
+}
+
+.mmn-hide
+{
+  display: none;
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px)
+{
+
+  .mmn-container, .mmn-half
+  {
+    width: 100%;
+  }
+
+  .mmn-twothird, .mmn-third,
+  {
+    width: 100%;
+    padding: 50px;
+  }
+
+  span.a
+  {
+  display: inline; /* the default for span */
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  }
+  .flex-container > div
+  {
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    flex-grow: 1;
+  }
+  .mmn-hide-small
+  {
+    display: none;
+  }
+  .mmn-hide
+  {
+    display: contents;
+  }
+}
