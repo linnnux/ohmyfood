@@ -10,18 +10,42 @@
   background: -webkit-linear-gradient( #99E2D0, #9356DC, #FF79DA, #99E2D0, black);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
+
 }
 
 body
 {
-  background-color: #FFF;
+  background-color: var(--grey);
   font-family: 'Raleway', sans-serif;
-  text-align: justify;
+  text-align: center;
   color: black;
-  max-width: 1300px;
+  max-width: 800px;
   margin: auto;
+  padding: 8px;
+  text-transform: capitalize;
+
 }
 
+header, section, article, picture, div
+{
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+header, section, article, picture, div :after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2, h3, h4, h5, h6
+{
+  width: 100%;
+
+  margin: 8px;
+}
 h1
 {
   float: left;
@@ -34,6 +58,7 @@ h1
   padding: 0px;
   margin: 0px;
   font-size: 48;
+  width: 100%;
 
 }
 h2
@@ -51,10 +76,50 @@ p
   font-size: 14px;
   font-weight:  400;
 }
+li
+{
+  text-align: left;
+  list-style-type: none; /* Remove bullets */
+  padding:0px; /* Remove padding */
+  margin:0px; /* Remove margins */
+}
+
+li article
+{
+  background-color: white;
+  text-align: left;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px grey;
+}
+
+li article img
+{
+  height: 180px;
+}
+li article h3
+{
+  font-size: 14px;
+  font-weight: lighter;
+}
+ul
+{
+  text-align: center;
+  margin: auto;
+  padding:0px; /* Remove padding */
+  margin:0px; /* Remove margins */
+}
+picture
+{
+  width: 100%;
+  float: left;
+}
 img
 {
    width:100%;
    object-fit: cover;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
 }
 
 
@@ -176,7 +241,7 @@ img
 /* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px)
 {
-
+/*
   .mmn-container, .mmn-half
   {
     width: 100%;
@@ -205,4 +270,5 @@ img
   {
     display: contents;
   }
+  */
 }
