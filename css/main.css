@@ -14,13 +14,7 @@ h1, footer h2
 
 }
 
-footer h2
-{
-  background: -webkit-linear-gradient( black, black);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0px;
-}
+
 
 body
 {
@@ -38,6 +32,12 @@ h2::first-letter {
   text-transform: capitalize;
 
 }
+*::first-letter
+{
+  text-transform: capitalize;
+
+}
+
 header
 {
   background-color: white;
@@ -323,6 +323,34 @@ form
   padding: 0px;
   padding-bottom: 20px;
 }
+
+
+/** footer **/
+footer h2
+{
+  background: -webkit-linear-gradient( #AAA, #EEE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0px;
+}
+
+footer
+{
+  background-color: #333;
+  width: 100%;
+  padding: 10px;
+  color: #DDD;
+  text-align: left;
+}
+ footer a
+ {
+   color: #EEE;
+ }
+ footer li
+ {
+   margin-bottom: 10px;
+ }
+
 /* containers */
 
 .mmn-container
