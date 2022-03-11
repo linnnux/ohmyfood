@@ -34,7 +34,7 @@ body
 }
 h2::first-letter {
   font-weight: bold;
-  color: red;
+  color: var(--primary);
   text-transform: capitalize;
 
 }
