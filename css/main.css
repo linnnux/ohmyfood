@@ -3,7 +3,7 @@
 {
   box-sizing: border-box;
 }
-.logo
+h1, footer h2
 {
   font-family: 'Shrikhand', cursive;
 
@@ -14,6 +14,13 @@
 
 }
 
+footer h2
+{
+  background: -webkit-linear-gradient( black, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 body
 {
   background-color: var(--grey);
@@ -22,9 +29,34 @@ body
   color: black;
   max-width: 800px;
   margin: auto;
-  padding: 8px;
   text-transform: capitalize;
 
+}
+header
+{
+  background-color: white;
+  box-shadow: 2px 2px 10px grey;
+
+}
+
+section:nth-of-type(1)
+{
+  text-align: center;
+}
+section:nth-of-type(2)
+{
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+section
+{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
 }
 
 header, section, article, picture, div
@@ -46,7 +78,9 @@ h2, h3, h4, h5, h6
 
   margin: 8px;
 }
-h1
+
+
+h1,
 {
   float: left;
   text-align: left;
@@ -76,6 +110,84 @@ p
   font-size: 14px;
   font-weight:  400;
 }
+
+
+ol :hover
+{
+  background-color: #f5edff;
+  color: purple;
+}
+
+ol li
+{
+  /*list-style: circled;*/
+  background-color: var(--grey);
+  border-radius: 20px;
+
+  margin-bottom: 15px;
+  margin-left: -20px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  box-shadow: 2px 2px 10px grey;
+
+
+}
+ol li span
+{
+  border-radius: 15px;
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+
+}
+.fas
+{
+  margin: 10px;
+}
+
+@counter-style circled
+{
+  system: fixed;
+  /*symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;*/
+  suffix: " ";
+  color:red;
+}
+
+/*
+https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+*/
+ol {
+  counter-reset: section;                /* On crée une nouvelle instance du
+                                            compteur section avec chaque ol */
+  list-style-type: none;
+}
+
+
+
+ol li::before
+{
+  background-color: #9356dc;
+  color: white;
+
+  border-radius: 50%;
+  text-align: center;
+
+  padding: 5px;
+  padding-left: 10px;
+
+  margin-left: -15px;
+
+  counter-increment: section;            /* On incrémente uniquement cette
+                                            instance du compteur */
+  content: counters(section,".") " ";    /* On ajoute la valeur de toutes les
+                                            instances séparées par ".". */
+                                         /* Si on doit supporter < IE8 il faudra
+                                            faire attention à ce qu'il n'y ait
+                                            aucun blanc après ',' */
+}
+
 li
 {
   text-align: left;
@@ -105,7 +217,6 @@ li article h3
 ul
 {
   text-align: center;
-  margin: auto;
   padding:0px; /* Remove padding */
   margin:0px; /* Remove margins */
 }
