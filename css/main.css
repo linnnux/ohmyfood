@@ -3,6 +3,8 @@
 {
   box-sizing: border-box;
 }
+
+/* logo, main title  */
 h1, footer h2
 {
   font-family: 'Shrikhand', cursive;
@@ -26,25 +28,25 @@ body
   margin: auto;
 
 }
-h2::first-letter {
-  font-weight: bold;
-  color: var(--primary);
-  text-transform: capitalize;
+/* capitalize first*/
 
-}
 *::first-letter
 {
   text-transform: capitalize;
-
 }
+
+h2::first-letter
+{
+  font-weight: bold;
+  color: var(--primary);
+}
+
 
 header
 {
   background-color: white;
   box-shadow: 2px 2px 10px grey;
-
 }
-
 
 
 header, section, article, picture, div
@@ -80,8 +82,6 @@ section:nth-of-type(1)
 
 }
 
-
-
 /* operation list */
 section:nth-of-type(2)
 {
@@ -101,31 +101,14 @@ main section:nth-of-type(1)
   width: 100%;
 }
 
-
+/* init heading level properties */
 h2, h3, h4, h5, h6
 {
   width: 100%;
-
   margin: 4px;
   padding: 4px;
 }
 
-
-h1,
-{
-  float: left;
-  text-align: left;
-  display: block;
-  /* https://fonts.google.com/specimen/Rancho?preview.text=Booki&preview.text_type=custom */
-  font-family: 'Rancho', cursive;
-  color: var(--blue);
-  font-weight: normal;
-  padding: 0px;
-  margin: 0px;
-  font-size: 48;
-  width: 100%;
-
-}
 h2
 {
   font-size: 20px;
@@ -142,6 +125,7 @@ p
   font-weight:  400;
 }
 
+/* operation ol style properties */
 
 ol :hover
 {
@@ -165,33 +149,21 @@ ol li
 
 
 }
-ol li span
-{
-  border-radius: 15px;
-  color: black;
-  font-weight: bolder;
-  text-align: center;
 
-}
+/* awsome font style */
 .fas
 {
   margin: 10px;
   color: grey;
 }
 
-@counter-style circled
-{
-  system: fixed;
-  /*symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;*/
-  suffix: " ";
-  color:red;
-}
-
+/* ol counter style */
 /*
 https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 */
-ol {
-  counter-reset: section;                /* On crée une nouvelle instance du
+ol
+{
+  counter-reset: section;                /* crée une nouvelle instance du
                                             compteur section avec chaque ol */
   list-style-type: none;
 }
@@ -211,19 +183,29 @@ ol li::before
 
   margin-left: -15px;
 
-  counter-increment: section;            /* On incrémente uniquement cette
+  counter-increment: section;            /* incrémente uniquement cette
                                             instance du compteur */
-  content: counters(section,".") " ";    /* On ajoute la valeur de toutes les
+  content: counters(section,".") " ";    /* ajoute la valeur de toutes les
                                             instances séparées par ".". */
-                                         /* Si on doit supporter < IE8 il faudra
+                                         /* Si doit supporter < IE8 il faudra
                                             faire attention à ce qu'il n'y ait
                                             aucun blanc après ',' */
 }
+
+/* list style*/
 
 li
 {
   text-align: left;
   list-style-type: none; /* Remove bullets */
+  padding:0px; /* Remove padding */
+  margin:0px; /* Remove margins */
+}
+
+/* restaurants articles list properties*/
+ul
+{
+  text-align: center;
   padding:0px; /* Remove padding */
   margin:0px; /* Remove margins */
 }
@@ -237,6 +219,23 @@ li article
   box-shadow: 2px 2px 10px grey;
 }
 
+/* images */
+
+picture
+{
+  width: 100%;
+  float: left;
+  margin-bottom: 8px;
+}
+
+img
+{
+   width:100%;
+   object-fit: cover;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+}
+
 li article img
 {
   height: 180px;
@@ -247,30 +246,15 @@ li article h3
   font-size: 14px;
   font-weight: 400;
 }
-ul
-{
-  text-align: center;
-  padding:0px; /* Remove padding */
-  margin:0px; /* Remove margins */
-}
-picture
-{
-  width: 100%;
-  float: left;
-  margin-bottom: 8px;
-}
-img
-{
-   width:100%;
-   object-fit: cover;
-   border-top-left-radius: 15px;
-   border-top-right-radius: 15px;
-}
+
+/* links */
+
 a
 {
   text-decoration: none;
   color: black;
 }
+
 a:focus
 {
   background: var(--secondary);
@@ -329,13 +313,8 @@ form
 
 
 /** footer **/
-footer h2
-{
-  background: -webkit-linear-gradient( #AAA, #EEE);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0px;
-}
+
+/* logo */
 
 footer
 {
@@ -345,167 +324,31 @@ footer
   color: #DDD;
   text-align: left;
 }
+
+footer h2
+{
+  background: -webkit-linear-gradient( #AAA, #EEE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0px;
+}
+
+/* links */
  footer a
  {
    color: #EEE;
  }
+
+ /* ul list properties */
+ 
  footer ul :hover
  {
    text-decoration: underline;
    color: var(--tertiary);
 
  }
+
  footer li
  {
    margin-bottom: 10px;
  }
-
-/* containers */
-
-.mmn-container
-{
-  width: 100%;
-  display: flex;
-  padding: 8px;
-}
-
-.mmn-container, .mmn-half :after
-{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.mmn-half
-{
-  width: 50%;
-  float: left;
-}
-.mmn-quarter
-{
-  width: 25%;
-  float: left;
-}
-.mmn-threequarter
-{
-  width: 75%;
-  float: left;
-}
-.mmn-twothird
-{
-  width: 66.66%;
-  float: left;
-}
-.mmn-third
-{
-  width: 33.33%;
-  float: left;
-}
-
-/* text align */
-
-.mmn-right
-{
-  text-align: right;
-  width: auto;
-  float: right;
-}
-.mmn-left
-{
-  text-align: left;
-}
-.mmn-center
-{
-  margin: auto;
-  text-align: center;
-
-}
-
-/* borders */
-.mmn-circle
-{
-  border-radius: 50%;
-}
-
-.mmn-border
-{
-  border: 1px solid;
-}
-
-.mmn-rounded
-{
-  border-radius: 25px;
-
-}
-
-/* font sizes */
-
-.mmn-tiny
-{
-  font-size: 10px;
-}
-
-.mmn-small
-{
-  font-size: 10px;
-}
-.mmn-medium
-{
-  font-size: 12px;
-}
-.mmn-large
-{
-  font-size: 14px;
-}
-.mmn-xlarge
-{
-  font-size: 18px;
-}
-.mmn-xxlarge
-{
-  font-size: 22px;
-}
-.mmn-xxxlarge
-{
-  font-size: 48px;
-}
-
-.mmn-hide
-{
-  display: none;
-}
-
-/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px)
-{
-/*
-  .mmn-container, .mmn-half
-  {
-    width: 100%;
-  }
-
-  .mmn-twothird, .mmn-third,
-  {
-    width: 100%;
-    padding: 50px;
-  }
-
-  .flex-container > div
-  {
-    width: 100%;
-    margin: 5px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-    flex-grow: 1;
-  }
-  .mmn-hide-small
-  {
-    display: none;
-  }
-  .mmn-hide
-  {
-    display: contents;
-  }
-  */
-}
