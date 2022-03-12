@@ -438,6 +438,44 @@ input[type=checkbox]:checked + label:before
    position: relative;
    left: 85%;
    top: -40px;
+   animation-name: example;
+   animation-duration: 4s;
 } /* checked icon */
 
  input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
+
+ /* animations */
+
+ @keyframes example
+ {
+  /* rgba(147, 86, 220, 0),rgba(225,128,220,0)*/
+
+   0%
+   {
+      background-color:red;
+      background: -webkit-radial-gradient(circle, rgba(147, 86, 220, 0.1), rgba(225,128,220,0.1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    50%
+    {
+       background-color:red;
+       background: -webkit-radial-gradient(circle, rgba(147, 86, 220, 0.5), rgba(225,128,220,à.5));
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+     }
+     75%
+     {
+        background-color:red;
+        background: -webkit-radial-gradient(circle, rgba(147, 86, 220, 0.75), rgba(225,128,220,0.75));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      100%
+      {
+         background-color:red;
+         background: -webkit-radial-gradient(circle, rgba(147, 86, 220, 1), rgba(225,128,220,1));
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+       }
+ }
