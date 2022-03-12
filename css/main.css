@@ -155,6 +155,7 @@ ol li
 {
   margin: 10px;
   color: grey;
+  width: 20px;
 }
 
 /* ol counter style */
@@ -340,10 +341,9 @@ footer h2
  }
 
  /* ul list properties */
- 
+
  footer ul :hover
  {
-   text-decoration: underline;
    color: var(--tertiary);
 
  }
