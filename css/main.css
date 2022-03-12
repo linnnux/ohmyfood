@@ -45,6 +45,21 @@ header
 
 }
 
+
+
+header, section, article, picture, div
+{
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+header, section, article, picture, div :after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
 section
 {
   padding-top: 30px;
@@ -75,29 +90,17 @@ section:nth-of-type(2)
   margin: auto;
   width: 100%;
 }
-/* operation list */
-section:nth-of-type(3)
+
+/* restaurant list */
+main section:nth-of-type(1)
 {
-  background-color: var(--light-grey);
+  background-color:var(--grey);
   text-align: left;
   margin: auto;
+  padding: 16px;
   width: 100%;
 }
 
-
-
-header, section, article, picture, div
-{
-  width: 100%;
-  display: flex;
-  margin: auto;
-}
-header, section, article, picture, div :after
-{
-  content: "";
-  display: table;
-  clear: both;
-}
 
 h2, h3, h4, h5, h6
 {
