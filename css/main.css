@@ -270,7 +270,7 @@ a
 }
 a:focus
 {
-  background: var(--primary);
+  background: var(--secondary);
   color: var(--primary);
 }
 
@@ -345,6 +345,12 @@ footer
  footer a
  {
    color: #EEE;
+ }
+ footer ul :hover
+ {
+   text-decoration: underline;
+   color: var(--tertiary);
+
  }
  footer li
  {
