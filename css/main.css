@@ -226,7 +226,6 @@ picture
 {
   width: 100%;
   float: left;
-  margin-bottom: 8px;
 }
 
 img
@@ -353,6 +352,18 @@ footer h2
    margin-bottom: 10px;
  }
 
+ main li article span
+ {
+   background-color: var(--tertiary);
+   color: var(--dark-tertiary);
+   font-size: 14px;
+   text-transform: capitalize;
+
+   position: relative;
+   left: 85%;
+   top: -160px;
+   padding: 5px 5px;
+ }
 
 /*
   hearth
@@ -377,6 +388,8 @@ footer h2
               position: relative;
               left: 85%;
               top: -40px;
+              margin: 0px;
+              float: left;
  }
 
  /*
