@@ -1,0 +1,42 @@
+
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px)
+{
+
+  /* restaurant 'new ' 'nouvea' label */
+  main li article span
+  {
+    left: 75%;
+  }
+/*
+  .mmn-container, .mmn-half
+  {
+    width: 100%;
+  }
+
+  .mmn-twothird, .mmn-third,
+  {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .flex-container > div
+  {
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    flex-grow: 1;
+  }
+  .mmn-hide-small
+  {
+    display: none;
+  }
+  .mmn-hide
+  {
+    display: contents;
+  }
+  */
+}
